@@ -1,12 +1,5 @@
 <%= simple_form_for(@task) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :content %>
-    <%= f.input :state %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <%= f.input :content, require: true, autofocus: true,  label: false, placeholder: "Content", input_html: { class: "form-control" } %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
